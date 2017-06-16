@@ -7,7 +7,7 @@ var rounds = 0;
 var peshoWinRound = 0;
 var goshoWinRound = 0;
 var winners = new Array(5);
-while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
+while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds < 5)) {
     //proverqvame dali pesho shte poluchi kruv (tova shte stane ako random chisloto i negovoto random chislo imat bit 1 na poziciq 3).
     if (checkPotionForPesho && checkABit) {
         peshoHealth = (peshoHealth <= 80) ? peshoHealth += bonusHealthForPesho : 100;
