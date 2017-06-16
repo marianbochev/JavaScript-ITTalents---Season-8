@@ -56,6 +56,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds < 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
 
@@ -68,6 +69,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds < 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
 
@@ -117,6 +119,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds < 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
     console.log('Na Gosho mu ostana: ' + goshoHealth + " kruv.");
@@ -149,6 +152,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds < 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
     console.log('Na Pesho mu ostana: ' + peshoHealth + " kruv.");
