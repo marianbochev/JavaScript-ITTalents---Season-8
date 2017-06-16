@@ -26,10 +26,10 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
     // console.log('randomGOSHO: ' + goshoDamage);
 
     //33% chance for rakiq!
-    var peshoFoundRakiq = Math.random() < 0.33;
-    var goshoFoundRakiq = Math.random() < 0.33;
+    var peshoFoundRakiq = Math.random() < 0.333;
+    var goshoFoundRakiq = Math.random() < 0.333;
 
-    //1% chance for div gligan!
+    //10% chance for div gligan!
     var wildBoarPesho = Math.random() < 0.01;
     var wildBoarGosho = Math.random() < 0.01;
 
