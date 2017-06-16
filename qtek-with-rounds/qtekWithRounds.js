@@ -16,7 +16,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
 
     //proverqvame dali gosho shte poluchi kruv (tova shte stane ako random chisloto i negovoto random chislo imat bit 1 na poziciq 4).
     if (checkPotionForGosho && checkABit) {
-        goshoHealth = (goshoHealth <= 80) ? goshoHealth += 20 : 100;
+        goshoHealth = (goshoHealth <= 80) ? goshoHealth += bonusHealthForGosho  : 100;
         console.log('Gosho poluchi ' + bonusHealthForGosho + 'HP');
     }
     //random generator from 1 to 10 damage!
