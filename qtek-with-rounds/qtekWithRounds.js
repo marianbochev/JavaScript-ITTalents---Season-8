@@ -7,7 +7,7 @@ var rounds = 0;
 var peshoWinRound = 0;
 var goshoWinRound = 0;
 var winners = new Array(5);
-while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
+while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds < 5)) {
     //proverqvame dali pesho shte poluchi kruv (tova shte stane ako random chisloto i negovoto random chislo imat bit 1 na poziciq 3).
     if (checkPotionForPesho && checkABit) {
         peshoHealth = (peshoHealth <= 80) ? peshoHealth += bonusHealthForPesho : 100;
@@ -16,7 +16,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
 
     //proverqvame dali gosho shte poluchi kruv (tova shte stane ako random chisloto i negovoto random chislo imat bit 1 na poziciq 4).
     if (checkPotionForGosho && checkABit) {
-        goshoHealth = (goshoHealth <= 80) ? goshoHealth += 20 : 100;
+        goshoHealth = (goshoHealth <= 80) ? goshoHealth += bonusHealthForGosho  : 100;
         console.log('Gosho poluchi ' + bonusHealthForGosho + 'HP');
     }
     //random generator from 1 to 10 damage!
@@ -26,10 +26,10 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
     // console.log('randomGOSHO: ' + goshoDamage);
 
     //33% chance for rakiq!
-    var peshoFoundRakiq = Math.random() < 0.33;
-    var goshoFoundRakiq = Math.random() < 0.33;
+    var peshoFoundRakiq = Math.random() < 0.333;
+    var goshoFoundRakiq = Math.random() < 0.333;
 
-    //1% chance for div gligan!
+    //10% chance for div gligan!
     var wildBoarPesho = Math.random() < 0.01;
     var wildBoarGosho = Math.random() < 0.01;
 
@@ -56,6 +56,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
 
@@ -68,6 +69,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
 
@@ -117,6 +119,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
     console.log('Na Gosho mu ostana: ' + goshoHealth + " kruv.");
@@ -149,6 +152,7 @@ while ((goshoHealth > 0) && (peshoHealth > 0) && (rounds <= 5)) {
         goshoHealth = 100;
         peshoHealth = 100;
         rounds++;
+        infected = false;
         continue;
     }
     console.log('Na Pesho mu ostana: ' + peshoHealth + " kruv.");
